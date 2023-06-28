@@ -135,7 +135,7 @@ class GuestClass:
             async with connection.cursor() as cur:
                 # Загружаем данные в базу
                 await cur.execute(f"insert into sac3.requeststatus_status(ID_Request, "
-                                    f"ID_RequestStatus, DateTime) "
+                                    f"ID_RequestStatus, DateCreate) "
                                   f"values ({id_request}, {id_request_status}, '{t_pass.dtRealTimePass}')")
                 await connection.commit()
 
